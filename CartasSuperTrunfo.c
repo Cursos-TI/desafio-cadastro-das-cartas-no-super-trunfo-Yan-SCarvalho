@@ -3,6 +3,7 @@
 int main() {
     // Variáveis da primeira carta
     char codigo1[4];
+    char nome1[20]; // Nome da cidade 1 (sem espaços)
     int populacao1;
     float area1;
     float pib1;
@@ -10,6 +11,7 @@ int main() {
 
     // Variáveis da segunda carta
     char codigo2[4];
+    char nome2[20]; // Nome da cidade 2 (sem espaços)
     int populacao2;
     float area2;
     float pib2;
@@ -19,6 +21,8 @@ int main() {
     printf("Cadastro da Carta 1:\n");
     printf("Código (ex: A01): ");
     scanf("%s", codigo1);
+    printf("Nome da cidade (sem espaços): ");
+    scanf("%s", nome1);
     printf("População: ");
     scanf("%d", &populacao1);
     printf("Área (em m²): ");
@@ -32,6 +36,8 @@ int main() {
     printf("\nCadastro da Carta 2:\n");
     printf("Código (ex: B02): ");
     scanf("%s", codigo2);
+    printf("Nome da cidade (sem espaços): ");
+    scanf("%s", nome2);
     printf("População: ");
     scanf("%d", &populacao2);
     printf("Área (em m²): ");
@@ -44,6 +50,7 @@ int main() {
     // Saída de dados das cartas
     printf("\n--- Carta 1 ---\n");
     printf("Código: %s\n", codigo1);
+    printf("Nome da cidade: %s\n", nome1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f m²\n", area1);
     printf("PIB: R$ %.2f\n", pib1);
@@ -51,6 +58,7 @@ int main() {
 
     printf("\n--- Carta 2 ---\n");
     printf("Código: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f m²\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
