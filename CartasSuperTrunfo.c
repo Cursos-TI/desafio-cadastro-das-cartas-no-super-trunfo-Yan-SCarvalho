@@ -4,7 +4,7 @@ int main() {
     // Variáveis da primeira carta
     char codigo1[4];
     char nome1[20];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int pontos_turisticos1;
@@ -14,7 +14,7 @@ int main() {
     // Variáveis da segunda carta
     char codigo2[4];
     char nome2[20];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int pontos_turisticos2;
@@ -28,7 +28,7 @@ int main() {
     printf("Nome da cidade (sem espaços): ");
     scanf("%s", nome1);
     printf("População: ");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
     printf("Área (em m²): ");
     scanf("%f", &area1);
     area1 = area1 / 1000000.0; // conversão de m² para km²
@@ -44,7 +44,7 @@ int main() {
     printf("Nome da cidade (sem espaços): ");
     scanf("%s", nome2);
     printf("População: ");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
     printf("Área (em m²): ");
     scanf("%f", &area2);
     area2 = area2 / 1000000.0; // conversão de m² para km²
@@ -64,7 +64,7 @@ int main() {
     printf("\n--- Carta 1 ---\n");
     printf("Código: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome1);
-    printf("População: %d\n", populacao1);
+    printf("População: %lu\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", pontos_turisticos1);
@@ -75,7 +75,7 @@ int main() {
     printf("\n--- Carta 2 ---\n");
     printf("Código: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome2);
-    printf("População: %d\n", populacao2);
+    printf("População: %lu\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", pontos_turisticos2);
@@ -112,8 +112,8 @@ int main() {
     printf("Densidade populacional (menor ganha) - Resultado: %d\n", resultado);
 
     // Super Poder (soma de todas as propriedades)
-    float super_poder1 = populacao1 + area1 + pib1 + pib_per_capita1 + densidade_populacional1 + pontos_turisticos1;
-    float super_poder2 = populacao2 + area2 + pib2 + pib_per_capita2 + densidade_populacional2 + pontos_turisticos2;
+    float super_poder1 = (float)populacao1 + area1 + pib1 + pib_per_capita1 + densidade_populacional1 + (float)pontos_turisticos1;
+    float super_poder2 = (float)populacao2 + area2 + pib2 + pib_per_capita2 + densidade_populacional2 + (float)pontos_turisticos2;
 
     resultado = super_poder1 > super_poder2;
     printf("Super Poder - Resultado: %d\n", resultado);
