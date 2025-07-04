@@ -82,6 +82,44 @@ int main() {
     printf("Densidade populacional: %.2f hab/km²\n", densidade_populacional2);
     printf("PIB per capita: R$ %.2f\n", pib_per_capita2);
 
+     //DESAFIO MESTRE :D
+
+         // Comparações simples entre as propriedades
+    int resultado;
+
+    // População
+    resultado = populacao1 > populacao2;
+    printf("\nPopulação - Resultado: %d\n", resultado);
+
+    // Área
+    resultado = area1 > area2;
+    printf("Área - Resultado: %d\n", resultado);
+
+    // PIB
+    resultado = pib1 > pib2;
+    printf("PIB - Resultado: %d\n", resultado);
+
+    // PIB per capita
+    resultado = pib_per_capita1 > pib_per_capita2;
+    printf("PIB per capita - Resultado: %d\n", resultado);
+
+    // Pontos turísticos
+    resultado = pontos_turisticos1 > pontos_turisticos2;
+    printf("Pontos turísticos - Resultado: %d\n", resultado);
+
+    // Densidade populacional (menor é melhor)
+    resultado = densidade_populacional1 < densidade_populacional2;
+    printf("Densidade populacional (menor ganha) - Resultado: %d\n", resultado);
+
+    // Super Poder (soma de todas as propriedades)
+    float super_poder1 = populacao1 + area1 + pib1 + pib_per_capita1 + densidade_populacional1 + pontos_turisticos1;
+    float super_poder2 = populacao2 + area2 + pib2 + pib_per_capita2 + densidade_populacional2 + pontos_turisticos2;
+
+    resultado = super_poder1 > super_poder2;
+    printf("Super Poder - Resultado: %d\n", resultado);
+
+
+
+
     return 0;
 }
-
